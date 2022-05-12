@@ -1,10 +1,11 @@
 import time
 import math
+import requests
 
 Uni = ["", "primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "setimo", "oitavo", "nono"];
 Dec = ["", "decimo", "vigesimo", "trigesimo", "quadragesimo", "quinquagesimo", "sexagesimo", "septuagesimo", "octagesimo", "nonagesimo"];
 Cen = ["", "centesimo", "ducentesimo", "tricentesimo", "quadringentesimo", "quingentesimo", "sexcentesimo", "septingentesimo", "octingentesimo", "nongentesimo"];  
-import requests
+
 url=('https://raw.githubusercontent.com/caio-azevedo/compras/main/auxiliar.py')
 page = requests.get(url)
 
@@ -63,7 +64,7 @@ if resposta2=="Não":
     print("Ok então, obrigado vamos encerrar o programa, até a próxima!")
     exit()
 if resposta2=="Sim":        
-    exec(exec(page.text))
+    exec(page.text)
 
 
 

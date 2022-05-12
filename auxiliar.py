@@ -1,6 +1,10 @@
 import time
 import math
-       
+import requests
+
+url=('https://raw.githubusercontent.com/caio-azevedo/compras/main/auxiliar.py')
+page = requests.get(url)
+
 item=int(input("Qual o número do outro item pesquisado?\n"))
 unidade = item % 10
 dezena = int(math.floor(item/10))% 10
@@ -44,4 +48,4 @@ if resposta2=="Não":
     print("Ok então, obrigado vamos encerrar o programa, até a próxima!")
     exit()
 if resposta2=="Sim":        
-    exec(open("Auxiliar/auxiliar.py",encoding='utf8').read())
+    exec(page.text)
