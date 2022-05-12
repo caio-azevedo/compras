@@ -7,7 +7,7 @@ Cen = ["", "centesimo", "ducentesimo", "tricentesimo", "quadringentesimo", "quin
 
 nome=input("Olá, qual é o seu nome?\n")
 print("\n")
-print(f"{nome}, aqui é Tarsila Virtual, a sua assistente para a elaboração de pregão!")
+print(f"{nome}, aqui é o assistente para a elaboração de pregão!")
 resposta=input("Podemos começar? Responda Sim ou Não.\n")
 
 if resposta=="Sim":        
@@ -59,5 +59,5 @@ if resposta2=="Não":
     print("Ok então, obrigado vamos encerrar o programa, até a próxima!")
     exit()
 if resposta2=="Sim":        
-    exec(open("auxiliar.py",encoding='utf8').read())
+    exec(open("Auxiliar/auxiliar.py",encoding='utf8').read())
 
